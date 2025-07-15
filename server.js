@@ -16,17 +16,17 @@ app.get('/cerca', (req, res) => {
   res.sendFile(path.join(__dirname, 'ricerca.html'));
 });
 app.get('/aggiungiStudente', (req, res) => {
-  res.sendFile(path.join(__dirname, 'nuovoStudente.html'));
+  res.sendFile(path.join(__dirname, 'aggiungiStudenti.html'));
 });
 app.get('/visualizzaStudenti', (req, res) => {
-  res.sendFile(path.join(__dirname, 'visuStudenti.html'));
+  res.sendFile(path.join(__dirname, 'vediStudenti.html'));
 });
 
 app.get('/aggiungiDocente', (req, res) => {
-  res.sendFile(path.join(__dirname, 'nuovoDocente.html'));
+  res.sendFile(path.join(__dirname, 'inserimentoDocenti.html'));
 });
 app.get('/visualizzaDocenti', (req, res) => {
-  res.sendFile(path.join(__dirname, 'visuDocenti.html'));
+  res.sendFile(path.join(__dirname, 'docenti.html'));
 });
 
 // route single studente
