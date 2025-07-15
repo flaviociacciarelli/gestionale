@@ -79,23 +79,4 @@ Il server sarà disponibile su `http://localhost:3000`
 
 ---
 
-## 🧩 Come Estendere il Progetto
-
-- ✅ Implementare autenticazione reale (es. JWT o sessioni)
-- ✅ Aggiungere eliminazione (`DELETE`)
-- ✅ Introdurre un database (es. MongoDB o SQLite)
-- ✅ Aggiungere validazione dei campi
-
----
-
-## 👨‍🏫 Suggerimenti Didattici
-
-- Stimola gli studenti a:
-  - leggere e modificare il backend
-  - aggiungere validazioni lato client
-  - usare DevTools per ispezionare chiamate API
-  - esercitarsi con il file system e manipolazione JSON
-
----
-
 Happy Coding! 💻
