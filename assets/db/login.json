@@ -1,0 +1,16 @@
+{
+  "utenti": [
+    {
+      "username": "admin@example.it",
+      "password": "1234"
+    },
+    {
+      "username": "valerio@esempio.it",
+      "password": "abcd"
+    },
+    {
+      "username": "flory",
+      "password": "1234"
+    }
+  ]
+}

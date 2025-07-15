@@ -1,12 +1,18 @@
 const express = require('express');
-const fs = require('fs');
-const path = require('path');
 
 const app = express();
+const path = require('path');
+const fs = require('fs');
 
-// Middleware to parse JSON
-app.use(express.json());
+app.use(express.json()); // Necessario per leggere il body delle POST
+
 app.use(express.static(__dirname));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'login.html'));
+});
 
 const dbPath = path.join(__dirname, 'assets', 'db', 'docenti.json');
 
