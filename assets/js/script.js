@@ -23,6 +23,20 @@ document
     const dataNascitaValueGirata = giraData(dataNascitaValue);
     console.log("==================");
     console.log(dataNascitaValueGirata);
+
+    function etaMediaStudenti(){
+    const dataCorrente = new Date();
+    console.log("==========");
+    console.log(dataCorrente);
+    console.log("==========");
+    
+    studenti.forEach(studente => {
+    const anniStudente = dataCorrente - dataNascitaValue;
+    console.log(anniStudente); 
+    });
+    
+    
+    };
     
 
     const dati = {
@@ -137,17 +151,6 @@ document
       }
     }
 
-  });
-
- /*  dataOriginale = "2025-10-02";
-  console.log(dataOriginale); */
-
-  
-
-   /*  dataConvertita = giraData(dataOriginale);
-    console.log(dataConvertita); */
-    
-    
-    
+  });   
 
 /*========= GET ========*/
