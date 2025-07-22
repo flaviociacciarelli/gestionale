@@ -29,7 +29,6 @@
 
 .inputs,
 select {
-  width: 40%;
   padding: 10px 15px;
   border-radius: 10px;
   border: 1px solid var(--grey1);
@@ -52,12 +51,6 @@ select:hover {
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 30px;
-}
-
-.containerIndirizzo input,
-.containerIndirizzo select {
-  display: flex;
-    flex: 1 1 48%;
 }
 
 .salva {
