@@ -26,7 +26,7 @@
 
   });*/
 
-  document.getElementById("loginForm").addEventListener("submit", function (e) {
+document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const user = document.getElementById("usernameLogin").value;
@@ -43,17 +43,26 @@
       const utente = data.utenti.find(
         (u) => u.username === user && u.password === password
       );
+      const messaggioAlert = document.getElementById("alert_login");
 
       if (utente) {
+        messaggioAlert.classList.add("alert-success");
+        messaggioAlert.innerHTML = "Benvenuto! Login riuscito!";
         console.log("Login riuscito");
-        // Reindirizza alla pagina Studente
-        window.location.href = "aggiungiStudenti.html";
+        setTimeout(() => {
+          // Reindirizza alla pagina Studente
+          window.location.href = "aggiungiStudenti.html";
+        }, 2000);
       } else {
-        alert("Credenziali errate");
+        messaggioAlert.classList.add("alert-danger");
+        messaggioAlert.innerHTML = "Credenziali errate!";
+        //alert("Credenziali errate");
       }
     })
     .catch((error) => {
       console.error("Errore:", error);
-      alert("Errore nel caricamento dei dati");
+      messaggioAlert.classList.add("alert-danger");
+      messaggioAlert.innerHTML = "Errore nel caricamento dei dati!";
+     // alert("Errore nel caricamento dei dati");
     });
 });
