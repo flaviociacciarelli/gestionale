@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/flaviociacciarelli/gestionale#readme",
   "dependencies": {
+    "chart.js": "^4.5.0",
     "express": "^5.1.0"
   }
 }
