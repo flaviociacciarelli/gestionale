@@ -37,4 +37,13 @@ td{
     width: 129.6px;
 }
 
+main{
+  padding-top: 100px;
+}
 
+table{
+  width: 90%;
+
+  border-radius: 20px;
+  border: 1px black solid;
+}
