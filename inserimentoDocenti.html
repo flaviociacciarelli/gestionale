@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inserimento Docenti</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-   <link rel="stylesheet" href="./assets/css/insdocenti.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/insdocenti.css" />
   </head>
-<body>
+  <body>
     <header class="site-header">
       <div class="container-header">
         <div class="row h-100">
@@ -55,211 +60,216 @@
       </div>
     </header>
     <!-- ./header -->
-  
+
     <div class="containerTutto">
       <div class="containerTitle text-center mb-4">
         <h1>Form di Inserimento Docente</h1>
       </div>
 
       <form id="formDocente">
-    <div class="row">
-      <div class="col">        
-        <label for="nome">Nome:</label>
-        <input
-          class="inputs form-control"
-          type="text"
-          id="nome"
-          name="nome"
-          placeholder="Nome"
-          required
-        />
-      </div>
-
-        <div class="col">
-        <label for="cognome">Cognome:</label>
-        <input
-          class="inputs form-control"
-          type="text"
-          id="cognome"
-          name="cognome"
-          placeholder="Cognome"
-          required
-        />
-      </div>
-    </div>
-        
-  <div class="col">
-        <label for="sesso">Sesso:</label>
-        <select
-          class="inputs form-select"
-          id="sesso"
-          name="sesso"
-          required
-        >
-          <option value="" disabled selected>Seleziona sesso</option>
-          <option value="maschio">Maschio</option>
-          <option value="femmina">Femmina</option>
-          <option value="altro">Altro</option>
-        </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-        <label for="email">Email:</label>
-        <input
-          class="inputs form-control text-lowercase"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-        </div>
-<div class="row">
-        <div class="col">
-        <label for="telefono">Telefono:</label>
-        <input
-          class="inputs form-control"
-          type="tel"
-          id="telefono"
-          name="telefono"
-          placeholder="Telefono"
-          required
-        />
-        </div>        
-<div class="col">
-        <label for="dataNascita">Data di nascita:</label>
-        <input
-          class="inputs form-control"
-          type="date"
-          id="dataNascita"
-          name="dataNascita"
-          required
-        />
-        </div>
-        </div>
         <div class="row">
-<div class="col">
-        <label for="cf">Codice Fiscale:</label>
-        <input
-          class="inputs form-control text-uppercase"
-          type="text"
-          id="cf"
-          name="cf"
-          placeholder="Codice Fiscale"
-          required
-        />
-      </div>
-      </div>
-      <div class="row">
-        <div class="col">
-        <label for="note">Note:</label>
-        <input
-          class="inputs form-control"
-          type="text"
-          id="note"
-          name="note"
-          placeholder="Note (facoltative)"
-        />
-        </div>
-        </div>
-<div class="row">
-        <div class="col">
-        <label for="materiaInsegnata">Materia insegnata:</label>
-        <select
-          class="inputs form-select"
-          id="materiaInsegnata"
-          name="materiaInsegnata"
-          required
-        >
-          <option value="" disabled selected>Seleziona materia</option>
-          <option value="Italiano">Italiano</option>
-          <option value="Matematica">Matematica</option>
-          <option value="Inglese">Inglese</option>
-          <option value="Storia">Storia</option>
-          <option value="Geografia">Geografia</option>
-          <option value="Filosofia">Filosofia</option>
-        </select>
-        </div>
           <div class="col">
-        <label for="dataAssunzione">Data di assunzione:</label>
-        <input
-          class="inputs form-control"
-          type="date"
-          id="dataAssunzione"
-          name="dataAssunzione"
-          required
-        />
-        </div>
-        </div>
-      <div class="containerIndirizzo">
-        <fieldset class="mt-4">
-          <h2>Indirizzo</h2>
-          <div class="row">
-            <div class="col">
-          <label for="via">Via:</label>
-          <input
-            class="inputs form-control"
-            type="text"
-            id="via"
-            name="via"
-            placeholder="Via"
-          />
+            <label for="nome">Nome:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome"
+              required
+            />
           </div>
-<div class="col">
-          <label for="cap">CAP:</label>
-          <input
-            class="inputs form-control"
-            type="number"
-            id="cap"
-            name="cap"
-            placeholder="CAP"
-          />
-          </div>
-          </div>
-<div class="row">
-  <div class="col">
-          <label for="comune">Comune:</label>
-          <input
-            class="inputs form-control"
-            type="text"
-            id="comune"
-            name="comune"
-            placeholder="Comune"
-          />
-          </div>
-<div class="col">
-          <label for="provincia">Provincia:</label>
-          <input
-            class="inputs form-control"
-            type="text"
-            id="provincia"
-            name="provincia"
-            placeholder="Provincia"
-          />
-          </div>
-          </div>
-<div class="row">
-  <div class="col">
-          <label for="nazione">Nazione:</label>
-          <input
-            class="inputs form-control"
-            type="text"
-            id="nazione"
-            name="nazione"
-            placeholder="Nazione"
-          />
-  </div>
 
-<div class="col">
+          <div class="col">
+            <label for="cognome">Cognome:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="cognome"
+              name="cognome"
+              placeholder="Cognome"
+              required
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col">
+            <label for="sesso">Sesso:</label>
+            <select class="inputs form-select" id="sesso" name="sesso" required>
+              <option value="" disabled selected>Seleziona sesso</option>
+              <option value="maschio">Maschio</option>
+              <option value="femmina">Femmina</option>
+              <option value="altro">Altro</option>
+            </select>
+          </div>
+
+          <div class="col">
+            <label for="email">Email:</label>
+            <input
+              class="inputs form-control text-lowercase"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col">
+            <label for="telefono">Telefono:</label>
+            <input
+              class="inputs form-control"
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Telefono"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="dataNascita">Data di nascita:</label>
+            <input
+              class="inputs form-control"
+              type="date"
+              id="dataNascita"
+              name="dataNascita"
+              required
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col">
+            <label for="cf">Codice Fiscale:</label>
+            <input
+              class="inputs form-control text-uppercase"
+              type="text"
+              id="cf"
+              name="cf"
+              placeholder="Codice Fiscale"
+              required
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col">
+            <label for="note">Note:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="note"
+              name="note"
+              placeholder="Note (facoltative)"
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col">
+            <label for="materiaInsegnata">Materia insegnata:</label>
+            <select
+              class="inputs form-select"
+              id="materiaInsegnata"
+              name="materiaInsegnata"
+              required
+            >
+              <option value="" disabled selected>Seleziona materia</option>
+              <option value="Italiano">Italiano</option>
+              <option value="Matematica">Matematica</option>
+              <option value="Inglese">Inglese</option>
+              <option value="Storia">Storia</option>
+              <option value="Geografia">Geografia</option>
+              <option value="Filosofia">Filosofia</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="dataAssunzione">Data di assunzione:</label>
+            <input
+              class="inputs form-control"
+              type="date"
+              id="dataAssunzione"
+              name="dataAssunzione"
+              required
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- INDIRIZZO -->
+        <div class="row">
+          <div class="col">
+            <label for="via">Via:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="via"
+              name="via"
+              placeholder="Via"
+            />
+          </div>
+          <div class="col">
+            <label for="cap">CAP:</label>
+            <input
+              class="inputs form-control"
+              type="number"
+              id="cap"
+              name="cap"
+              placeholder="CAP"
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col">
+            <label for="comune">Comune:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="comune"
+              name="comune"
+              placeholder="Comune"
+            />
+          </div>
+          <div class="col">
+            <label for="provincia">Provincia:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="provincia"
+              name="provincia"
+              placeholder="Provincia"
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col">
+            <label for="nazione">Nazione:</label>
+            <input
+              class="inputs form-control"
+              type="text"
+              id="nazione"
+              name="nazione"
+              placeholder="Nazione"
+            />
+          </div>
+        </div>
+        <!-- /.row -->
+
         <div class="text-center mt-4">
           <button class="btn btn-primary" type="submit">Salva</button>
         </div>
       </form>
-</div>
-</div>
     </div>
-    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

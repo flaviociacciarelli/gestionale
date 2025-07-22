@@ -42,7 +42,9 @@ select:hover {
   outline: none;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
 }
-
+#formDocente .row{
+  width: 100%;
+}
 .containerIndirizzo {
   width: 100%;
   display: flex;
