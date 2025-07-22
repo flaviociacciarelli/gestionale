@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#formDocente {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.inputLabel {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputs,
+select {
+  width: 40%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--grey1);
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.inputs:hover,
+select:hover {
+  border-color: var(--blue);
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.containerIndirizzo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.containerIndirizzo input,
+.containerIndirizzo select {
+  display: flex;
+    flex: 1 1 48%;
+}
+
+.salva {
+  width: 200px;
+  padding: 10px 0;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 30px auto;
+}
+
+.salva:hover {
+  background-color: #0056b3;
+}
+
+.containerTutto {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  margin-top: 150px;
+}

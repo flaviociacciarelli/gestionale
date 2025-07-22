@@ -149,15 +149,6 @@ main.site-main {
   align-items: center;
 }
 
-.inputs{
-  width:  45%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  border-radius: 15px;
-  border-color: var(--grey1);
-  margin-top: 20px;
-}
-
 /* ==========================================================================
    5.0 - Header
    ========================================================================== */
@@ -204,6 +195,10 @@ ul {
   display: flex;
   flex-direction: row;
 }
+
+
+
+
 /* ==========================================================================
   6.0 - Footer
    ========================================================================== */
@@ -216,6 +211,9 @@ footer.site-footer {
   font-size: 15px;
   padding-top: 50px;
 }
+
+
+
 /* ==========================================================================
   7.0 - HOME
    ========================================================================== */
@@ -501,47 +499,5 @@ footer.site-footer {
     7.0 - HOME
      ========================================================================== */
   }
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
-.containerTitle{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#formDocente {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap:30px;
-}
-
-.inputLabel{
-    width: 45%;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-
-.containerIndirizzo{
-    width: 100%;
-    margin-left: 15%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-.salva{
-    width: 20%;
-    display: block;
-    justify-self: center;
-}
   }
