@@ -40,6 +40,8 @@
     <!--  ./header -->
 
     <main class="site-main">
+      <div class="alert w-25 m-auto mt-5" id="alert_login"></div>
+      
       <div class="main d-flex flex-column">
         <div class="title">
           <h3><u>Login</u></h3>
@@ -89,7 +91,12 @@
                 Example help text goes outside the input group.
               </div>
             </div>
-            <button type="submit" id="btn-login" class="btn-login w-100 rounded-pill">
+            <button
+              onclick="mostraMessaggio()"
+              type="submit"
+              id="btn-login"
+              class="btn-login w-100 rounded-pill"
+            >
               LOGIN
             </button>
           </form>
