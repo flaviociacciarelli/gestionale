@@ -29,6 +29,11 @@ app.get('/visualizzaDocenti', (req, res) => {
   res.sendFile(path.join(__dirname, 'docenti.html'));
 });
 
+//route per statistiche
+app.get('/statStudenti', (req, res) => {
+  res.sendFile(path.join(__dirname, 'statStudenti.html'));
+});
+
 // route single studente
 app.get('/studente/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'studente.html'));
@@ -37,6 +42,8 @@ app.get('/studente/:id', (req, res) => {
 app.get('/docente/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'docente.html'));
 });
+
+
 
 
 // ✅ Endpoint per studenti

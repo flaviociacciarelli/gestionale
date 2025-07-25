@@ -27,8 +27,8 @@
   2.0 - Reset
    ========================================================================== */
 *{
-    border: 0px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -40,16 +40,20 @@
 /* ==========================================================================
   4.0 - Globals
    ========================================================================== */
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
+.table {
+  margin: 20px auto;
   width: 90%;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 12px 8px;
+}
+
+.table td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
 }
 
 /* ==========================================================================
