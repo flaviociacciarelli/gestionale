@@ -6,7 +6,7 @@ fetch("http://localhost:3000/api/studenti/")
     return response.json();
   })
   .then((studenti) => {
-    const tabella = document.getElementById("tabella");
+    
     let maschi = [];
     let femmine = [];
     let altro = [];
@@ -21,21 +21,6 @@ fetch("http://localhost:3000/api/studenti/")
       } else {
         altro.push(studente);
       }
-
-      // Aggiunta riga alla tabella
-      const rowTable = `
-        <tr>
-            <td>${studente.id}</td>
-            <td>${studente.infoPersonali.nome}</td>
-            <td>${studente.infoPersonali.cognome}</td>
-            <td>${studente.infoPersonali.infoNascita.dataNascita}</td>
-            <td>${studente.infoPersonali.email}</td>
-            <td>${studente.infoPersonali.tel}</td>
-            <td>${studente.corso}</td>
-            <td><a class="btn btn-primary" href="http://localhost:3000/studente/${studente.id}" target="_blank" rel="noopener noreferrer">Altro</a></td>
-        </tr>`;
-
-      tabella.innerHTML += rowTable;
     });
 
     // Calcoli età medie
@@ -53,6 +38,73 @@ fetch("http://localhost:3000/api/studenti/")
     console.log("Età media studenti maschi:", etaMediaMaschi);
     console.log("Età media studenti altro:", etaMediaAltro);
 
+  // Pie Chart (dopo il conteggio)
+    const ctxGender = document.getElementById("genderChart").getContext("2d");
+    new Chart(ctxGender, {
+      type: "pie",
+      data: {
+        labels: ["Maschi", "Femmine", "Altro"],
+        datasets: [
+          {
+            data: [maschi.length, femmine.length, altro.length],
+            backgroundColor: ["#36A2EB", "#FF6384", "#5D5D5D"],
+            borderColor: "#fff",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: "bottom" } },
+      },
+    });
+
+  // Dati per il grafico
+    const datiGrafico = {
+      labels: ['Maschi', 'Femmine', 'Altro', 'Totale'],
+      datasets: [
+        {
+
+          data: [etaMediaMaschi, etaMediaFemmine, etaMediaAltro, etaMediaTotale],
+            label: false,
+            backgroundColor: ["rgba(54, 162, 235, 0.5)", "rgba(255, 99, 132, 0.5)", "rgba(93, 93, 93, 0.5)", "rgba(191, 255, 0, 0.5)"],
+            borderColor: ["rgba(54, 162, 235, 1)", "rgba(255, 99, 132, 1)", "rgba(93, 93, 93, 1)", "rgba(191, 255, 0, 1)"],
+            borderWidth: 2 ,  
+            borderRadius: 10,
+            borderSkipped: false,
+          
+        }
+      ]
+    };
+
+    // Configurazione
+    const configGrafico = {
+      type: 'bar',
+      data: datiGrafico,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: true,
+            text: 'Età media studenti per genere'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            suggestedMin: 10,
+            suggestedMax: 30
+          }
+        }
+      }
+    };
+
+    // Render grafico
+    const ctx = document.getElementById('graficoEta').getContext('2d');
+    new Chart(ctx, configGrafico);
   }) 
 
   .catch((error) => {
