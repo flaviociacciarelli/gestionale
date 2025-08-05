@@ -40,9 +40,11 @@
 /* ==========================================================================
   4.0 - Globals
    ========================================================================== */
-.table {
+.table.table {
   margin: 20px auto;
   width: 90%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .table th {
@@ -55,6 +57,17 @@
     border: 1px solid #dee2e6;
     padding: 8px;
 }
+
+table.table tbody tr td a.id-link{
+  text-decoration: underline;
+  color: #000000;
+}
+
+table.table tbody tr td a.btn-table{
+  padding: 0 12px;
+}
+
+
 
 /* ==========================================================================
    1.0  Variables
@@ -78,7 +91,7 @@
   2.0 - Reset
    ========================================================================== */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -93,6 +106,7 @@ body * {
    ========================================================================== */
 body {
   background-color: var(--cream1);
+  font-size: 14px;
 }
 .main {
   background: linear-gradient(
@@ -143,6 +157,7 @@ input {
 }
 p {
   text-align: center;
+  
 }
 main.site-main {
   padding-top: 110px;
@@ -151,6 +166,17 @@ main.site-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* CARD */
+
+.card-header{
+  background: none;
+  /* border-bottom: none; */
+}
+
+img.img_profilo{
+  width: 5%;
 }
 
 /* ==========================================================================

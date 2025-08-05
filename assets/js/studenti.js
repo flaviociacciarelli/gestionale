@@ -25,14 +25,14 @@ fetch("http://localhost:3000/api/studenti/")
       // Aggiunta riga alla tabella
       const rowTable = `
         <tr>
-            <td>${studente.id}</td>
+            <td><a href="http://localhost:3000/studente/${studente.id}" target="_blank" class="id-link">${studente.id}</a></td>
             <td>${studente.infoPersonali.nome}</td>
             <td>${studente.infoPersonali.cognome}</td>
             <td>${studente.infoPersonali.infoNascita.dataNascita}</td>
             <td>${studente.infoPersonali.email}</td>
             <td>${studente.infoPersonali.tel}</td>
             <td>${studente.corso}</td>
-            <td><a class="btn btn-primary" href="http://localhost:3000/studente/${studente.id}" target="_blank" rel="noopener noreferrer">Altro</a></td>
+            <td><a class="btn btn-primary btn-table" href="http://localhost:3000/studente/${studente.id}" target="_blank" rel="noopener noreferrer">Altro</a></td>
         </tr>`;
 
       tabella.innerHTML += rowTable;
