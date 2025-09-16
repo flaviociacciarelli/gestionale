@@ -9,9 +9,7 @@ body {
   gap: 40px;
   margin-top: 40px;
 }
-.chart-container {
-  
-}
+
 tr{
     display: flex;
 }
