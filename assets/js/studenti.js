@@ -1,9 +1,10 @@
 fetch("http://localhost:3000/api/studenti/")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Errore nel recupero dei dati");
-    }
+  .then(response => {
+        if (!response.ok) {
+          throw new Error('Errore nel recupero dei dati');
+        }
     return response.json();
+
   })
   .then((studenti) => {
     const tabella = document.getElementById("tabella");

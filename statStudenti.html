@@ -18,15 +18,20 @@
     <header class="site-header"></header>
     <main class="site-main">
         <h1 class="text-center">Statistiche Studenti</h1>
-  <div id="charts">
-    <div class="chart-container">
+  <div id="charts d-flex">
+    <div class="chart-container d-flex align-content-center mt-5">
+      <div class="graficoGenere">
       <h3 class="text-center">Distribuzione Maschi e Femmine</h3>
       <canvas id="genderChart"></canvas>
+      </div>
       <br>
+      <div class="graficoEta mt-5">
       <h3 class="text-center">Età media degli studenti</h3>
       <canvas id="graficoEta"></canvas>
+      </div>
     </div>
     </main>
+    
     <footer class="site-footer"></footer>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/script.js"></script>
