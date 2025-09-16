@@ -10,17 +10,34 @@ let header = `
       <div class="container-header">
         <div class="row h-100">
           <div class="col-5 d-flex justify-content-start align-items-center">
-            <ul class="list-container">
-              <li>
-                <button class="btn-stud" href="#" role="link" id="apriFormStud">Studente</button>
-              </li>
-              <li>
-                <button class="btn-stud" href="#" role="link" id="apriFormDoc">Docente</button>
-              </li>
-              <li>
-                <button class="btn-stud" href="#" role="link" id="apriFormAmmin">Amministrativo</button>
-              </li>
-            </ul>
+            <div
+              id="ruoli"
+              class="container"
+              role="group"
+              aria-label="Seleziona ruolo"
+            >
+              <button
+                class="roleBtn"
+                data-role="Stud"
+                aria-controls="azioni-Stud"
+              >
+                Studente
+              </button>
+              <button
+                class="roleBtn"
+                data-role="Doc"
+                aria-controls="azioni-Doc"
+              >
+                Docente
+              </button>
+              <button
+                class="roleBtn"
+                data-role="Ammin"
+                aria-controls="azioni-Ammin"
+              >
+                Amministrativo
+              </button>
+            </div>
           </div>
           <div class="col-2 d-flex justify-content-center align-items-center">
             <svg
@@ -47,6 +64,51 @@ let header = `
             </ul>
           </div>
         </div>
+      </div>
+      
+      <div
+        class="container-menu d-flex flex-column justify-content-center"
+      >
+        <!-- Bottoni AZIONE (tutti nascosti all'avvio con hidden) -->
+        <div
+          id="azioni-Stud"
+          class="container"
+          role="group"
+          aria-label="Azioni Studente"
+          hidden
+        >
+          <button  class="actionBtn"><a href="http://localhost:3000/aggiungiStudente">Inserisci Studente</button>
+          <button  class="actionBtn"><a href="http://localhost:3000/visualizzaStudenti">Visualizza Studenti</a></button>
+          <button class="actionBtn"><a href="http://localhost:3000/statStudenti">Statistica Studente</button>
+          <button class="backBtn">⬅ Indietro</button>
+        </div>
+
+        <div
+          id="azioni-Doc"
+          class="container"
+          role="group"
+          aria-label="Azioni Docente"
+          hidden
+        >
+          <button class="actionBtn">Inserisci Docente</button>
+          <button class="actionBtn">Visualizza Docenti</button>
+          <button class="actionBtn">Modifica Docente</button>
+          <button class="backBtn">⬅ Indietro</button>
+        </div>
+
+        <div
+          id="azioni-Ammin"
+          class="container"
+          role="group"
+          aria-label="Azioni Amministrativo"
+          hidden
+        >
+          <button class="actionBtn">Inserisci Amministrativo</button>
+          <button class="actionBtn">Visualizza Amministrativi</button>
+          <button class="actionBtn">Modifica Amministrativo</button>
+          <button class="backBtn">⬅ Indietro</button>
+        </div>
+       
       </div>`;
 let siteHeater = document.getElementById("site-header");
 siteHeater.innerHTML = header;
@@ -63,3 +125,110 @@ let footer = `
     </footer>`;
 let siteFooter = document.getElementById("site-footer");
 siteFooter.innerHTML = footer;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ruoli = document.getElementById("ruoli");
+  const roleButtons = ruoli.querySelectorAll(".roleBtn");
+  const actionGroups = document.querySelectorAll('[id^="azioni-"]');
+
+  function hideAllActions() {
+    actionGroups.forEach((g) => (g.hidden = true));
+  }
+
+  function clearActive(container) {
+    container
+      .querySelectorAll(".active")
+      .forEach((b) => b.classList.remove("active"));
+  }
+
+  // Click sui bottoni RUOLO
+  roleButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const role = btn.dataset.role;
+      const group = document.getElementById(`azioni-${role}`);
+
+      // Evidenzia ruolo selezionato
+      clearActive(ruoli);
+      btn.classList.add("active");
+
+      // Mostra SOLO il gruppo azioni del ruolo selezionato
+      hideAllActions();
+      group.hidden = false;
+
+      // Reset evidenziazione delle azioni in quel gruppo
+      clearActive(group);
+    });
+  });
+
+  // Evidenziazione bottoni AZIONE
+  actionGroups.forEach((group) => {
+    group.addEventListener("click", (e) => {
+      const target = e.target;
+      if (target.classList.contains("actionBtn")) {
+        clearActive(group);
+        target.classList.add("active");
+      }
+    });
+  });
+
+  // Bottone INDIETRO per ogni gruppo azioni
+  document.querySelectorAll(".backBtn").forEach((back) => {
+    back.addEventListener("click", () => {
+      hideAllActions();
+      clearActive(ruoli);
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const roleButtons = document.querySelectorAll(".roleBtn");
+  const actionContainers = document.querySelectorAll("[id^='azioni-']");
+  const backButtons = document.querySelectorAll(".backBtn");
+  const contenitoreDiv = document.getElementById("contenitore-div");
+
+  // Nasconde tutti i contenitori azione
+  function hideAllActions() {
+    actionContainers.forEach(container => container.hidden = true);
+  }
+
+  // Mostra azioni del ruolo scelto
+  roleButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const role = button.dataset.role;
+      hideAllActions();
+      document.getElementById(`azioni-${role}`).hidden = false;
+      contenitoreDiv.innerHTML = ""; // reset
+    });
+  });
+
+  // Torna indietro
+  backButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      hideAllActions();
+      contenitoreDiv.innerHTML = "";
+    });
+  });
+
+  // Carica pagina HTML dentro contenitore-div
+  /* const actionButtons = document.querySelectorAll(".actionBtn");
+  actionButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      
+      
+      let fileName = btn.textContent.replace(/\s+/g, "_").toLowerCase() + ".html";
+
+      fetch(`./${fileName}`)
+        .then(response => {
+          if (!response.ok) throw new Error("Errore nel caricamento della pagina");
+          return response.text();
+        })
+        .then(html => {
+          contenitoreDiv.innerHTML = html;
+        })
+        .catch(err => {
+          contenitoreDiv.innerHTML = `<p style="color:red">${err.message}</p>`;
+        }); 
+    });
+  });*/
+});

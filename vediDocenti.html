@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visualizza Studenti</title>
+    <title>Visualizza Docenti</title>
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -14,32 +14,33 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-    <main class="site-main site-main-studenti">
-    <header id="site-header" class="site-header"></header>
+    <main class="site-main">
+    <header class="site-header"></header>
       <table class="table table-striped shadow table-hover">
         <thead>
           <tr>
-          <th>ID</th>
           <th>Nome</th>
           <th>Cognome</th>
-          <th>Data di Nascita</th>
-          <th>email</th>
+          <th>Sesso</th>
+          <th>Email</th>
           <th>Telefono</th>
-          <th>Corso</th>
-          <th>Altro</th>
+          <th>Data di Nascita</th>
+          <th>Codice fiscale</th>
+          <th>Materia insegnata</th>
+          <th>Data di assunzione</th>
         </tr>
         </thead>
-        <tbody id="tabella">
+        <tbody id="tabellaDocenti">
         </tbody>
       </table>
   
 
-    <div class="col-12"><a class="btn btn-primary" href="http://localhost:3000/">Aggiungi Studenti</a></div>
+    <div class="col-12"><a class="btn btn-primary" href="http://localhost:3000/inserimentoDocenti.html">Aggiungi Docenti</a></div>
     
     </main>
-    <footer id="site-footer" class="site-footer"></footer>
+    <footer class="site-footer"></footer>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/studenti.js"></script>
+    <script src="./assets/js/docenti.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
