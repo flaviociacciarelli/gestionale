@@ -8,16 +8,22 @@ fetch("http://localhost:3000/api/docenti")
   .then((docenti) => {
     const table = document.getElementById("tabellaDocenti");
 
-    let maschi = 0;
-    let femmine = 0;
-    let altro = 0;
+    let maschi = [];
+    let femmine = [];
+    let altro = [];
 
     docenti.forEach((docente) => {
-      console.log(docente);
 
-      const row = document.createElement("tr");
+      const sesso = docente.infoPersonali.sesso.toLowerCase();
+      if (sesso === "m") {
+        maschi ++;
+      } else if (sesso === "f") {
+        femmine ++;
+      } else {
+        altro ++;
+      }
 
-      row.innerHTML = `
+      const row = `
       <td class="tdNome">${docente.infoPersonali.nome}</td>
       <td id="striped">${docente.infoPersonali.cognome}</td>
     <td>${docente.infoPersonali.sesso}</td>
@@ -27,22 +33,14 @@ fetch("http://localhost:3000/api/docenti")
       <td>${docente.infoPersonali.cf}</td>
       <td id="striped">${docente.lavoro.materiaInsegnata}</td>
       <td>${docente.lavoro.dataAssunzione}</td>
+      <td><a class="btn btn-primary btn-table" href="http://localhost:3000/docente/${docente.id}" target="_blank" rel="noopener noreferrer">Altro</a></td>
       `;
 
-      table.appendChild(row);
-
-      const sesso = docente.infoPersonali.sesso.toLowerCase();
-      if (sesso === "m") {
-        maschi += 1;
-      } else if (sesso === "f") {
-        femmine += 1;
-      } else {
-        altro += 1;
-      }
+      tabellaDocenti.innerHTML += row;
     });
 
     // Pie Chart (dopo il conteggio)
-    const ctxGender = document.getElementById("genderChart").getContext("2d");
+     const ctxGender = document.getElementById("genderChart").getContext("2d");
     new Chart(ctxGender, {
       type: "pie",
       data: {
@@ -66,3 +64,34 @@ fetch("http://localhost:3000/api/docenti")
     document.body.innerHTML += `<p style="color:red;">${error.message}</p>`;
     console.error("errore nella fetch", error);
   });
+
+  function calcolaEtaMedia(docenti) {
+  const oggi = new Date();
+  let sommaEta = 0;
+  let totaleDocenti = 0;
+
+  docenti.forEach((docente) => {
+    const dataNascitaDoc = docente.infoPersonali.infoNascita.dataNascita;
+    const dataNascita = new Date(dataNascitaDoc);
+
+    let eta = oggi.getFullYear() - dataNascita.getFullYear();
+    const meseOggi = oggi.getMonth();
+    const giornoOggi = oggi.getDate();
+    const meseNascita = dataNascita.getMonth();
+    const giornoNascita = dataNascita.getDate();
+
+    if (
+      meseOggi < meseNascita ||
+      (meseOggi === meseNascita && giornoOggi < giornoNascita)
+    ) {
+      eta--;
+    }
+
+    if (!isNaN(eta)) {
+      sommaEta += eta;
+      totaleDocenti++;
+    }
+  });
+
+  return totaleDocenti > 0 ? (sommaEta / totaleDocenti).toFixed(2) : "N/D";
+}

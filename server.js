@@ -26,10 +26,13 @@ app.get('/aggiungiDocente', (req, res) => {
   res.sendFile(path.join(__dirname, 'inserimentoDocenti.html'));
 });
 app.get('/visualizzaDocenti', (req, res) => {
-  res.sendFile(path.join(__dirname, 'docenti.html'));
+  res.sendFile(path.join(__dirname, 'vediDocenti.html'));
 });
 app.get('/statStudenti', (req, res) => {
   res.sendFile(path.join(__dirname, 'statStudenti.html'));
+});
+app.get('/statDocenti', (req, res) => {
+  res.sendFile(path.join(__dirname, 'statDocenti.html'));
 });
 // route single studente
 app.get('/studente/:id', (req, res) => {
