@@ -26,7 +26,7 @@ app.get('/aggiungiDocente', (req, res) => {
   res.sendFile(path.join(__dirname, 'inserimentoDocenti.html'));
 });
 app.get('/visualizzaDocenti', (req, res) => {
-  res.sendFile(path.join(__dirname, 'docenti.html'));
+  res.sendFile(path.join(__dirname, 'vediDocenti.html'));
 });
 app.get('/statStudenti', (req, res) => {
   res.sendFile(path.join(__dirname, 'statStudenti.html'));
