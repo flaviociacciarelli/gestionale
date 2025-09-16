@@ -16,11 +16,11 @@ fetch("http://localhost:3000/api/docenti")
 
       const sesso = docente.infoPersonali.sesso.toLowerCase();
       if (sesso === "m") {
-        maschi += 1;
+        maschi ++;
       } else if (sesso === "f") {
-        femmine += 1;
+        femmine ++;
       } else {
-        altro += 1;
+        altro ++;
       }
 
       const row = `
@@ -40,7 +40,7 @@ fetch("http://localhost:3000/api/docenti")
     });
 
     // Pie Chart (dopo il conteggio)
-    /* const ctxGender = document.getElementById("genderChart").getContext("2d");
+     const ctxGender = document.getElementById("genderChart").getContext("2d");
     new Chart(ctxGender, {
       type: "pie",
       data: {
@@ -62,5 +62,36 @@ fetch("http://localhost:3000/api/docenti")
   })
   .catch((error) => {
     document.body.innerHTML += `<p style="color:red;">${error.message}</p>`;
-    console.error("errore nella fetch", error); */
+    console.error("errore nella fetch", error);
   });
+
+  function calcolaEtaMedia(docenti) {
+  const oggi = new Date();
+  let sommaEta = 0;
+  let totaleDocenti = 0;
+
+  docenti.forEach((docente) => {
+    const dataNascitaDoc = docente.infoPersonali.infoNascita.dataNascita;
+    const dataNascita = new Date(dataNascitaDoc);
+
+    let eta = oggi.getFullYear() - dataNascita.getFullYear();
+    const meseOggi = oggi.getMonth();
+    const giornoOggi = oggi.getDate();
+    const meseNascita = dataNascita.getMonth();
+    const giornoNascita = dataNascita.getDate();
+
+    if (
+      meseOggi < meseNascita ||
+      (meseOggi === meseNascita && giornoOggi < giornoNascita)
+    ) {
+      eta--;
+    }
+
+    if (!isNaN(eta)) {
+      sommaEta += eta;
+      totaleDocenti++;
+    }
+  });
+
+  return totaleDocenti > 0 ? (sommaEta / totaleDocenti).toFixed(2) : "N/D";
+}

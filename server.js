@@ -31,6 +31,9 @@ app.get('/visualizzaDocenti', (req, res) => {
 app.get('/statStudenti', (req, res) => {
   res.sendFile(path.join(__dirname, 'statStudenti.html'));
 });
+app.get('/statDocenti', (req, res) => {
+  res.sendFile(path.join(__dirname, 'statDocenti.html'));
+});
 // route single studente
 app.get('/studente/:id', (req, res) => {
   res.sendFile(path.join(__dirname, 'studente.html'));
