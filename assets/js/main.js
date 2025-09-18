@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const role = btn.dataset.role;
       const group = document.getElementById(`azioni-${role}`);
+      const element = document.querySelector('.')
 
       // Evidenzia ruolo selezionato
       clearActive(ruoli);

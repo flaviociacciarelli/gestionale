@@ -107,7 +107,7 @@ p {
   text-align: center;
 }
 main.site-main.site-main-login {
-  padding-top: 110px;
+  padding-top: 50px;
 }
 .site-menu {
   display: flex;
@@ -136,8 +136,7 @@ header.site-header {
   margin: auto;
   height: 70px;
   width: 90%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
 }
 svg {
   height: 50px;
@@ -451,4 +450,24 @@ footer.site-footer {
   /* ==========================================================================
     7.0 - HOME
      ========================================================================== */
+}
+
+/* 
+modifiche pre lancio */
+
+.header-login{
+  border-radius: 20px;
+}
+
+.container-main-login{
+gap: 0;
+}
+
+.login-body{
+  overflow: hidden;
+}
+
+.container-header.radiusZero{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }

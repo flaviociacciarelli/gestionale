@@ -88,7 +88,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
         setTimeout(() => {
           // Reindirizza alla pagina MenuIniziale
-          window.location.href = "MenuIniziale.html";
+          window.location.href = "/aggiungiStudente";
         }, 2000);
       } else {
         messaggioAlert.classList.add("alert-danger");
