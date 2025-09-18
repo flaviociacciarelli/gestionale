@@ -141,12 +141,23 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((b) => b.classList.remove("active"));
   }
 
+  const containerHeader = document.querySelector('.container-header');
+const containerMenu = document.querySelector('.container-menu');
+  containerHeader.addEventListener("click", ()=>{
+    containerHeader.classList.add("radiusZero"); 
+    
+  })
+const btnBack = document.querySelector('backBtn');
+btnBack.addEventListener("click", ()=> {
+containerHeader.classList.remove("radiusZero");
+});
+
   // Click sui bottoni RUOLO
   roleButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const role = btn.dataset.role;
       const group = document.getElementById(`azioni-${role}`);
-      document.getElementById("radiusDinamico").className = "container-header radiusZero"; 
+      //document.getElementById("radiusDinamico").className = "container-header radiusZero"; 
 
       // Evidenzia ruolo selezionato
       clearActive(ruoli);
@@ -186,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const roleButtons = document.querySelectorAll(".roleBtn");
   const actionContainers = document.querySelectorAll("[id^='azioni-']");
   const backButtons = document.querySelectorAll(".backBtn");
-  const contenitoreDiv = document.getElementById("contenitore-div");
+  //const contenitoreDiv = document.getElementById("contenitore-div");
 
   // Nasconde tutti i contenitori azione
   function hideAllActions() {
@@ -199,7 +210,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const role = button.dataset.role;
       hideAllActions();
       document.getElementById(`azioni-${role}`).hidden = false;
-      contenitoreDiv.innerHTML = ""; // reset
+      contenitoreDiv.innerHTML = ""; 
+      // reset
     });
   });
 
@@ -207,7 +219,7 @@ document.addEventListener("DOMContentLoaded", () => {
   backButtons.forEach(button => {
     button.addEventListener("click", () => {
       hideAllActions();
-      contenitoreDiv.innerHTML = "";
+      //contenitoreDiv.innerHTML = "";
     });
   });
 
