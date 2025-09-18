@@ -136,8 +136,7 @@ header.site-header {
   margin: auto;
   height: 70px;
   width: 90%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+ border-radius: 20px;
 }
 svg {
   height: 50px;
@@ -451,4 +450,9 @@ footer.site-footer {
   /* ==========================================================================
     7.0 - HOME
      ========================================================================== */
+}
+
+.container-header.radiusZero{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }

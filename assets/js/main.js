@@ -7,7 +7,7 @@ function addFavicon() {
 }
 
 let header = `
-      <div class="container-header">
+      <div id="radiusDinamico" class="container-header">
         <div class="row h-100">
           <div class="col-5 d-flex justify-content-start align-items-center">
             <div
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const role = btn.dataset.role;
       const group = document.getElementById(`azioni-${role}`);
+      document.getElementById("radiusDinamico").className = "container-header radiusZero"; 
 
       // Evidenzia ruolo selezionato
       clearActive(ruoli);
