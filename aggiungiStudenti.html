@@ -12,16 +12,16 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body>
+  <body class="body-studente">
     <header id="site-header"></header>
-    <h1 class="text-center">Modulo di Inserimento Studenti</h1>
+    <h1 class="text-center pt-3">Modulo di Inserimento Studenti</h1>
 
-    <form id="inserisciStudenti" class="row g-3">
-      <div class="col-md-6">
+    <form id="inserisciStudenti" class="row g-3 form-studente">
+      <div class="col-md-5">
         <label for="nome_studente" class="form-label">Nome</label>
         <input type="text" class="form-control" id="nome_studente" required />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="cognome_studente" class="form-label">Cognome</label>
         <input
           type="text"
@@ -30,7 +30,7 @@
           required
         />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="dataNascita" class="form-label">Data di Nascita</label>
         <input
           type="date"
@@ -39,7 +39,7 @@
           required
         />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="CF" class="form-label">Codice Fiscale</label>
         <input
           type="text"
@@ -49,7 +49,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="luogoNascita" class="form-label">Luogo di nascita</label>
         <input
           type="text"
@@ -58,7 +58,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="nazionalita" class="form-label">Nazionalità</label>
         <input
           type="text"
@@ -67,7 +67,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="genere" class="form-label">Genere</label>
         <select id="genere" class="form-select" aria-label="Default select example" required>
           <option selected>Seleziona Genere</option>
@@ -77,11 +77,11 @@
         </select>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="mail_studente" class="form-label">eMail</label>
         <input type="email" class="form-control text-lowercase" id="mail_studente" required />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="telefono_studente" class="form-label">Telefono</label>
         <input
           type="tel"
@@ -90,7 +90,7 @@
         required>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="via_studente" class="form-label">Via</label>
         <input
           type="text"
@@ -99,7 +99,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="cap_studente" class="form-label">Cap</label>
         <input
           type="number"
@@ -108,7 +108,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="comune_studente" class="form-label">Comune</label>
         <input
           type="text"
@@ -117,7 +117,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="provincia_studente" class="form-label">Provincia</label>
         <input
           type="text"
@@ -126,7 +126,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="nazione_studente" class="form-label">Nazione</label>
         <input
           type="text"
@@ -135,7 +135,7 @@
         />
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="selectCorso" class="form-label">Corso</label>
         <select id="selectCorso" class="form-select" aria-label="Default select example" required>
           <option selected>Seleziona Corso</option>
@@ -144,7 +144,7 @@
           <option value="Pizzaiolo">Pizzaiolo</option>
         </select>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <label for="note" class="form-label">Note</label>
         <input
           type="text"
@@ -153,9 +153,8 @@
         />
       </div>
       
-      <div class="col-6"><a class="btn btn-primary" href="http://localhost:3000/visualizzaStudenti">Vedi Studenti</a></div>
-      <div class="col-6">
-        <button type="submit" class="btn btn-primary">Invia</button>
+      <div class="col-11 d-flex flex-row-reverse">
+        <button type="submit" class="btn invia-form">Invia</button>
       </div>
     
     </form>

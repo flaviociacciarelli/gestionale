@@ -177,19 +177,25 @@ svg {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  background-image: linear-gradient(
-    to right,
-    rgba(191, 191, 191, 0.5),
-    rgba(191, 191, 191, 1)
-  );
   color: black;
   transition: background-color 0.2s;
   margin-top: 30px;
   
-  margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-.actionBtn:hover,
-.backBtn:hover {
+
+.actionBtn, a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.backBtn{
+  border: solid 1px white;
+  color: white;
+  background-color: #545454;
+}
+
+.actionBtn:hover {
   background-image: linear-gradient(
     to right,
     rgba(191, 191, 191, 0.5),
@@ -455,4 +461,27 @@ footer.site-footer {
 .container-header.radiusZero{
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+
+.form-studente{
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.body-studente{
+  padding-bottom: 80px;
+}
+
+.invia-form{
+  width: 150px;
+  margin-top: 20px;
+  background-color: #20B7CA;
+  color: white;
+}
+
+.actionBtn, .backBtn{
+  border: solid 1px black;
+  background-color: #bababa;
+  margin-bottom: 20px;
 }
