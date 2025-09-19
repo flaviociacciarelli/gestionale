@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+    <header id="site-header" class="site-header"></header>
     <main class="site-main">
-    <header class="site-header"></header>
+     <div class="container">
       <table class="table table-striped shadow table-hover">
         <thead>
           <tr>
@@ -24,21 +25,21 @@
           <th>Sesso</th>
           <th>Email</th>
           <th>Telefono</th>
-          <th>Data di Nascita</th>
-          <th>Codice fiscale</th>
           <th>Materia insegnata</th>
           <th>Data di assunzione</th>
+          <th>Altro</th>
         </tr>
         </thead>
         <tbody id="tabellaDocenti">
         </tbody>
       </table>
+      </div>
   
 
-    <div class="col-12"><a class="btn btn-primary" href="http://localhost:3000/inserimentoDocenti.html">Aggiungi Docenti</a></div>
+    <div class="col-11 d-flex flex-row-reverse"><a class="btn invia-form aggiungi-btn" href="http://localhost:3000/inserimentoDocenti.html">Aggiungi Docenti</a></div>
     
     </main>
-    <footer class="site-footer"></footer>
+    <footer class="site-footer" id="site-footer"></footer>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/docenti.js"></script>
     <script

@@ -7,6 +7,7 @@ function addFavicon() {
 }
 
 let header = `
+    <header class="site-header">
       <div id="radiusDinamico" class="container-header">
         <div class="row h-100">
           <div class="col-5 d-flex justify-content-start align-items-center">
@@ -109,9 +110,10 @@ let header = `
           <button class="backBtn">⬅ Indietro</button>
         </div>
        
-      </div>`;
-let siteHeater = document.getElementById("site-header");
-siteHeater.innerHTML = header;
+      </div>
+      </header>`;
+let siteHeader = document.getElementById("site-header");
+siteHeader.innerHTML = header;
 
 let footer = `
       <footer class="site-footer">
@@ -148,6 +150,9 @@ const containerMenu = document.querySelector('.container-menu');
     
   })
 const btnBack = document.querySelector('.backBtn');
+
+console.log(btnBack);
+
 btnBack.addEventListener("click", ()=> {
 containerHeader.classList.remove("radiusZero");
 });

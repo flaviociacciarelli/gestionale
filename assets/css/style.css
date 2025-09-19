@@ -68,8 +68,12 @@ body {
   width: 25vw;
   border-radius: 25px;
   padding: 30px;
-  gap: 25px;
 }
+
+main{
+  padding-top: 44px;
+}
+
 form {
   width: 100%;
   font-size: 15px;
@@ -114,17 +118,12 @@ main.site-main.site-main-login {
   flex-direction: column;
   align-items: center;
 }
-.site-main.site-main-studenti{
-  padding-top: 210px;
-}
 
 /* ==========================================================================
    5.0 - Header
    ========================================================================== */
 header.site-header {
-  
-  position: fixed;
-  top: 14px;
+  margin: 12px 0 32px;
   width: 100%;
 }
 .container-header {
@@ -235,13 +234,12 @@ ul {
   6.0 - Footer
    ========================================================================== */
 footer.site-footer {
-  position: fixed;
   width: 100%;
-  bottom: 14px;
+  margin-top: 16px;
+
 }
 .container-footer {
   font-size: 15px;
-  padding-top: 50px;
 }
 /* ==========================================================================
   7.0 - HOME
@@ -469,10 +467,6 @@ footer.site-footer {
   margin: auto;
 }
 
-.body-studente{
-  padding-bottom: 80px;
-}
-
 .invia-form{
   width: 150px;
   margin-top: 20px;
@@ -480,11 +474,27 @@ footer.site-footer {
   color: white;
 }
 
+.invia-form:hover{
+    background-color: #1c99a9;
+  color: white;
+}
+
+.invia-form.aggiungi-btn{
+  width: 200px;
+}
+
+.invia-form.btn-altro{
+  width: 70px;
+  padding: 0;
+  margin-top: -1px;
+}
+
 .actionBtn, .backBtn{
   border: solid 1px black;
   background-color: #bababa;
   margin-bottom: 20px;
 }
+
 
 main.main-ricerca{
   margin-top: 150px;
@@ -498,3 +508,12 @@ button.btn.actionBtn{
   width: fit-content;
   margin-left: auto;
 }
+
+.login-body{
+  overflow: hidden;
+}
+
+.footer-login{
+  margin-top: -16px;
+}
+
