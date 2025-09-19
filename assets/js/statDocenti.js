@@ -143,7 +143,3 @@ function calcolaEtaMedia(docenti) {
 
   return totaleDocenti > 0 ? (sommaEta / totaleDocenti).toFixed(2) : "N/D";
 }
-
-
-
-

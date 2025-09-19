@@ -33,7 +33,7 @@ fetch("http://localhost:3000/api/studenti/")
             <td>${studente.infoPersonali.email}</td>
             <td>${studente.infoPersonali.tel}</td>
             <td>${studente.corso}</td>
-            <td><a class="btn btn-primary btn-table" href="http://localhost:3000/studente/${studente.id}" target="_blank" rel="noopener noreferrer">Altro</a></td>
+            <td><a class="btn invia-form btn-altro btn-table" href="http://localhost:3000/studente/${studente.id}" target="_blank" rel="noopener noreferrer">Altro</a></td>
         </tr>`;
 
       tabella.innerHTML += rowTable;
