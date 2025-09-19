@@ -20,35 +20,90 @@
     <form id="inserisciDocenti" class="row g-3 form-studente pb-5 mb-5">
       <div class="col-md-5">
         <label for="nome_docente" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="nome_docente" name="nome" required />
+        <input
+          type="text"
+          class="form-control"
+          id="nome_docente"
+          name="nome"
+          required
+        />
       </div>
       <div class="col-md-5">
         <label for="cognome_docente" class="form-label">Cognome</label>
-        <input type="text" class="form-control" id="cognome_docente" name="cognome" required />
+        <input
+          type="text"
+          class="form-control"
+          id="cognome_docente"
+          name="cognome"
+          required
+        />
       </div>
 
       <div class="col-md-5">
-        <label for="dataNascita_docente" class="form-label">Data di Nascita</label>
-        <input type="date" class="form-control" id="dataNascita_docente" name="dataNascita" required />
+        <label for="dataNascita_docente" class="form-label"
+          >Data di Nascita</label
+        >
+        <input
+          type="date"
+          class="form-control"
+          id="dataNascita_docente"
+          name="dataNascita"
+          required
+        />
       </div>
       <div class="col-md-5">
         <label for="CF_docente" class="form-label">Codice Fiscale</label>
-        <input type="text" class="form-control text-uppercase" id="CF_docente" name="cf" required />
+        <input
+          type="text"
+          class="form-control text-uppercase"
+          id="CF_docente"
+          name="cf"
+          required
+        />
       </div>
-
       <div class="col-md-5">
-        <label for="luogoNascita_docente" class="form-label">Luogo di nascita</label>
-        <input type="text" class="form-control" id="luogoNascita_docente" name="luogoNascita" />
+        <label for="dataAssunzione_docente" class="form-label"
+          >Data di Assunzione</label
+        >
+        <input
+          type="date"
+          class="form-control"
+          id="dataAssunzione_docente"
+          name="dataAssunzione"
+          required
+        />
+      </div>
+      <div class="col-md-5">
+        <label for="luogoNascita_docente" class="form-label"
+          >Luogo di nascita</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="luogoNascita_docente"
+          name="luogoNascita"
+        />
       </div>
 
       <div class="col-md-5">
         <label for="nazionalita_docente" class="form-label">Nazionalità</label>
-        <input type="text" class="form-control" id="nazionalita_docente" name="nazionalita" />
+        <input
+          type="text"
+          class="form-control"
+          id="nazionalita_docente"
+          name="nazionalita"
+        />
       </div>
 
       <div class="col-md-5">
         <label for="genere_docente" class="form-label">Genere</label>
-        <select id="genere_docente" name="genere" class="form-select" aria-label="Default select example" required>
+        <select
+          id="genere_docente"
+          name="genere"
+          class="form-select"
+          aria-label="Default select example"
+          required
+        >
           <option selected>Seleziona Genere</option>
           <option value="M">M</option>
           <option value="F">F</option>
@@ -58,12 +113,24 @@
 
       <div class="col-md-5">
         <label for="mail_docente" class="form-label">eMail</label>
-        <input type="email" class="form-control text-lowercase" id="mail_docente" name="email" required />
+        <input
+          type="email"
+          class="form-control text-lowercase"
+          id="mail_docente"
+          name="email"
+          required
+        />
       </div>
 
       <div class="col-md-5">
         <label for="telefono_docente" class="form-label">Telefono</label>
-        <input type="tel" class="form-control" id="telefono_docente" name="telefono" required />
+        <input
+          type="tel"
+          class="form-control"
+          id="telefono_docente"
+          name="telefono"
+          required
+        />
       </div>
 
       <div class="col-md-5">
@@ -78,22 +145,43 @@
 
       <div class="col-md-5">
         <label for="comune_docente" class="form-label">Comune</label>
-        <input type="text" class="form-control" id="comune_docente" name="comune" />
+        <input
+          type="text"
+          class="form-control"
+          id="comune_docente"
+          name="comune"
+        />
       </div>
 
       <div class="col-md-5">
         <label for="provincia_docente" class="form-label">Provincia</label>
-        <input type="text" class="form-control" id="provincia_docente" name="provincia" />
+        <input
+          type="text"
+          class="form-control"
+          id="provincia_docente"
+          name="provincia"
+        />
       </div>
 
       <div class="col-md-5">
         <label for="nazione_docente" class="form-label">Nazione</label>
-        <input type="text" class="form-control" id="nazione_docente" name="nazione" />
+        <input
+          type="text"
+          class="form-control"
+          id="nazione_docente"
+          name="nazione"
+        />
       </div>
 
       <div class="col-md-5">
         <label for="selectMateria" class="form-label">Materia insegnata</label>
-        <select id="selectMateria" name="materiaInsegnata" class="form-select" aria-label="Default select example" required>
+        <select
+          id="selectMateria"
+          name="materiaInsegnata"
+          class="form-select"
+          aria-label="Default select example"
+          required
+        >
           <option selected>Seleziona Materia</option>
           <option value="Italiano">Italiano</option>
           <option value="Matematica">Matematica</option>
@@ -104,7 +192,7 @@
         </select>
       </div>
 
-      <div class="col-md-5">
+      <div class="col-md-11 mx-auto">
         <label for="note_docente" class="form-label">Note</label>
         <input type="text" class="form-control" id="note_docente" name="note" />
       </div>

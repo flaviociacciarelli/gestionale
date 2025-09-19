@@ -2,10 +2,10 @@ function addFavicon() {
     const link = document.createElement('link');
     link.rel = 'icon';
     link.type = 'image/png';
-    link.href = '/asset/img/favicon.png';
+    link.href = '/assets/img/favicon.png';
     document.head.appendChild(link);
 }
-
+addFavicon();
 let header = `
     <header class="site-header">
       <div id="radiusDinamico" class="container-header">

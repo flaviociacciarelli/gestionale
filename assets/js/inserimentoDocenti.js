@@ -1,5 +1,5 @@
 
-document.getElementById("formDocente").addEventListener("submit", function (e) {
+document.getElementById("inserisciDocenti").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const now = new Date();
@@ -22,35 +22,34 @@ document.getElementById("formDocente").addEventListener("submit", function (e) {
 
   const dati = {
     infoPersonali: {
-      nome: document.getElementById("nome").value.trim(),
-      cognome: document.getElementById("cognome").value.trim(),
-      sesso: document.getElementById("sesso").value.trim(),
-      email: document.getElementById("email").value.trim(),
-      telefono: document.getElementById("telefono").value.trim(),
-      dataNascita: giraData(document.getElementById("dataNascita").value.trim()),
-      cf: document.getElementById("cf").value.trim(),
+      nome: document.getElementById("nome_docente").value.trim(),
+      cognome: document.getElementById("cognome_docente").value.trim(),
+      sesso: document.getElementById("genere_docente").value.trim(),
+      email: document.getElementById("mail_docente").value.trim(),
+      telefono: document.getElementById("telefono_docente").value.trim(),
+      dataNascita: giraData(document.getElementById("dataNascita_docente").value.trim()),
+      cf: document.getElementById("CF_docente").value.trim(),
     },
 
     lavoro: {
       materiaInsegnata: document
-        .getElementById("materiaInsegnata")
-        .value.trim(),
-      dataAssunzione: giraData(document.getElementById("dataAssunzione").value.trim()),
+        .getElementById("selectMateria").value.trim(),
+      dataAssunzione: giraData(document.getElementById("dataAssunzione_docente").value.trim()),
     },
 
     residenza: {
-      via: document.getElementById("via").value.trim(),
-      cap: document.getElementById("cap").value.trim(),
-      comune: document.getElementById("comune").value.trim(),
-      provincia: document.getElementById("provincia").value.trim(),
-      nazione: document.getElementById("nazione").value.trim(),
+      via: document.getElementById("via_docente").value.trim(),
+      cap: document.getElementById("cap_docente").value.trim(),
+      comune: document.getElementById("comune_docente").value.trim(),
+      provincia: document.getElementById("provincia_docente").value.trim(),
+      nazione: document.getElementById("nazione_docente").value.trim(),
     },
     timestamp: {
       dataAggiunta: `${parti.day}/${parti.month}/${parti.year}`,
       orarioAggiunta: `${parti.hour}:${parti.minute}`,
       timestampLocale: `${parti.day}-${parti.month}-${parti.year}_${parti.hour}-${parti.minute}`
     },
-    note: document.getElementById("note").value.trim(),
+    note: document.getElementById("note_docente").value.trim(),
   };
   inviaDatiAlServer(dati);
 
