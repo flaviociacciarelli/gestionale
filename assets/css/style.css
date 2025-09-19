@@ -485,3 +485,16 @@ footer.site-footer {
   background-color: #bababa;
   margin-bottom: 20px;
 }
+
+main.main-ricerca{
+  margin-top: 150px;
+}
+
+.main-ricerca .container-ricerca .row-ricerca{
+  width: 100%;
+}
+
+button.btn.actionBtn{
+  width: fit-content;
+  margin-left: auto;
+}
