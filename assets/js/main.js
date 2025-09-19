@@ -32,7 +32,7 @@ let header = `
                 Docente
               </button>
               <button
-                class="roleBtn"
+                class="roleBtn Disabled opacity-50"
                 data-role="Ammin"
                 aria-controls="azioni-Ammin"
               >
@@ -57,10 +57,10 @@ let header = `
           <div class="col-5 d-flex justify-content-center align-items-center">
             <ul class="list-container">
               <li>
-                <a class="btn" href="#" role="button">SEARCH</a>
+                <a class="btn" href="/cerca" role="button">Cerca</a>
               </li>
               <li>
-                <a class="btn" href="#" role="button">LOGOUT</a>
+                <a class="btn" href="#" role="button">Logout</a>
               </li>
             </ul>
           </div>
@@ -99,7 +99,7 @@ let header = `
 
         <div
           id="azioni-Ammin"
-          class="container"
+          class="container Disabled opacity-50"
           role="group"
           aria-label="Azioni Amministrativo"
           hidden
@@ -150,6 +150,7 @@ const containerMenu = document.querySelector('.container-menu');
     
   })
 const btnBack = document.querySelector('.backBtn');
+
 console.log(btnBack);
 
 btnBack.addEventListener("click", ()=> {
