@@ -77,9 +77,9 @@ let header = `
           aria-label="Azioni Studente"
           hidden
         >
-          <button  class="actionBtn"><a href="http://localhost:3000/aggiungiStudente">Inserisci Studente</button>
+          <button  class="actionBtn"><a href="http://localhost:3000/aggiungiStudente">Inserisci Studente</a></button>
           <button  class="actionBtn"><a href="http://localhost:3000/visualizzaStudenti">Visualizza Studenti</a></button>
-          <button class="actionBtn"><a href="http://localhost:3000/statStudenti">Statistica Studente</button>
+          <button class="actionBtn"><a href="http://localhost:3000/statStudenti">Statistiche Studenti</a></button>
           <button class="backBtn">⬅ Indietro</button>
         </div>
 
@@ -90,9 +90,9 @@ let header = `
           aria-label="Azioni Docente"
           hidden
         >
-          <button class="actionBtn">Inserisci Docente</button>
-          <button class="actionBtn">Visualizza Docenti</button>
-          <button class="actionBtn">Modifica Docente</button>
+          <button class="actionBtn"><a href="http://localhost:3000/aggiungiDocente">Inserisci Docente</a></button>
+          <button class="actionBtn"><a href="http://localhost:3000/visualizzaDocenti">Visualizza Docenti</a></button>
+          <button class="actionBtn"><a href="http://localhost:3000/statDocenti">Statistiche Docenti</a></button>
           <button class="backBtn">⬅ Indietro</button>
         </div>
 
