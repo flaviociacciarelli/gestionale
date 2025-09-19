@@ -24,6 +24,7 @@ fetch("http://localhost:3000/api/docenti")
       }
 
       const row = `
+      <td><a href="http://localhost:3000/studente/${docente.id}" target="_blank" class="id-link">${docente.id}</a></td>
       <td class="tdNome">${docente.infoPersonali.nome}</td>
       <td id="striped">${docente.infoPersonali.cognome}</td>
     <td>${docente.infoPersonali.sesso}</td>
