@@ -68,7 +68,6 @@ body {
   width: 25vw;
   border-radius: 25px;
   padding: 30px;
-  gap: 25px;
 }
 form {
   width: 100%;
@@ -235,13 +234,12 @@ ul {
   6.0 - Footer
    ========================================================================== */
 footer.site-footer {
-  position: fixed;
   width: 100%;
-  bottom: 14px;
+  margin-top: 16px;
+
 }
 .container-footer {
   font-size: 15px;
-  padding-top: 50px;
 }
 /* ==========================================================================
   7.0 - HOME
@@ -469,10 +467,6 @@ footer.site-footer {
   margin: auto;
 }
 
-.body-studente{
-  padding-bottom: 80px;
-}
-
 .invia-form{
   width: 150px;
   margin-top: 20px;
@@ -484,4 +478,12 @@ footer.site-footer {
   border: solid 1px black;
   background-color: #bababa;
   margin-bottom: 20px;
+}
+
+.login-body{
+  overflow: hidden;
+}
+
+.footer-login{
+  margin-top: -16px;
 }
